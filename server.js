@@ -20,9 +20,8 @@ mongoose.connect(uri, {
   })
   .catch(err => console.log(err));
 
-const userRouter = require('./routes/users');
+
 const TodoRouter = require('./routes/toDos');
-app.use('/users',userRouter);
 app.use('/todo',TodoRouter);
 
 app.listen(port,()=>{
